@@ -5,157 +5,87 @@
 <meta charset='UTF-8'>
 
 <title>DreamLinuxer@JTV</title>
-
 <style>
-* {
-	margin: 0;
-	padding: 0;
+
+html,body
+{
+	margin:0;
+	padding:0;
+	height:100%;
+	background: #333333;
+
 }
-body {
-	background: #0;  
+.fluid
+{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height:0;
+    padding-bottom: 56.25%; /* proportion value to aspect ratio 16:9 (9 / 16 = 0.5625 or 56.25%) */
+    padding-top: 32px;
+
 }
-#page-wrap {
-	width: 1283px; 
-	margin: 0px auto;
+.fluid iframe
+{
+	border: none;
+	position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.container
+{
+	width:100%;
+	height:100%;
+    overflow: hidden;
+      display: table;
+
+}
+.main
+{
+	display: table-cell;
+	height: 100%;
 }
 
-.tabs {
-	position: relative;   
-	min-height: 753px;
-	clear: both;
-	margin: 25px 0;
+.sidebar
+{
+	width:380px;
+	display: table-cell;
+
 }
-.tab {
-	float: left;
-}
-.tab label {
-	background: #000; 
-	padding: 10px; 
-	border: 1px solid #ccc; 
-	margin-left: -1px; 
-	position: relative;
-	left: 1px; 
-}
-.tab [type=radio] {
-	display: none;   
-}
-.content {
-	position: absolute;
-	top: 30px;
-	left: 0;
-	background: black;
-	right: 0;
-	bottom: 0;
-	padding: 0px;
-	border: 1px solid #ccc; 
-}
-[type=radio]:checked ~ label {
-	background: black;
-	border-bottom: 1px solid black;
-	z-index: 2;
-}
-[type=radio]:checked ~ label ~ .content {
-	z-index: 1;
+#tlkio
+{
+
+	height: 100%;
+}	
+.footer
+{
+	width:100%;
+	padding: 2px;
+	font-size: 8px;
+	color:#999;
+
 }
 </style>
+
 </head>
 
-<body BGCOLOR="000000" text="#FFFFFF" link="#FFFFFF" vlink="#FFFFFF" alink="#FFFFFF">
-<table>
-	<TR>
-		<TD rowspan=2>
-			<div id="page-wrap">
+<body>
+<div class="container">
+<div class="main">
+<div class="fluid">
+<iframe src="http://www.ustream.tv/embed/19787840?wmode=direct"></iframe>	
+</div>	
+</div>
+<div class="sidebar">
+<div id="tlkio" data-channel="dopphentai"></div><script async src="http://tlk.io/embed.js" type="text/javascript"></script>	
+</div>
 
-				<div class="tabs">
-
-					<div class="tab">
-						<input type="radio" id="tab-1" name="tab-group-1">
-						<label for="tab-1">vaughn</label>
-
-						<div class="content">
-							<iframe src="http://vaughnlive.tv/embed/video/dreamlinuxer000?viewers=true&autoplay=true" frameborder="0" framespacing="0" width="1280" height="720" /></iframe>
-						</div> 
-					</div>
-
-					<div class="tab">
-						<input type="radio" id="tab-2" name="tab-group-1">
-						<label for="tab-2">ustream</label>
-
-						<div class="content">
-							<iframe src="//www.ustream.tv/embed/19787840?wmode=direct" style="border: 0 none transparent;" frameborder="no" width="1280" height="720"></iframe>
-						</div>
-					</div>
-
-					<div class="tab">
-						<input type="radio" id="tab-3" name="tab-group-1">
-						<label for="tab-3">twitch</label>
-
-						<div class="content">
-							<object type="application/x-shockwave-flash" height="720" width="1280" id="live_embed_player_flash" data="http://www.twitch.tv/widgets/live_embed_player.swf?channel=dreamlinuxer0x67616d65" bgcolor="#000000">
-								<param name="allowFullScreen" value="true" />
-								<param name="allowScriptAccess" value="always" />
-								<param name="allowNetworking" value="all" />
-								<param name="movie" value="http://www.twitch.tv/widgets/live_embed_player.swf" />
-								<param name="flashvars" value="hostname=www.twitch.tv&channel=dreamlinuxer0x67616d65&auto_play=true&start_volume=25" />
-							</object>
-						</div> 
-					</div>
-
-					<div class="tab">
-						<input type="radio" id="tab-4" name="tab-group-1">
-						<label for="tab-4">yuta</label>
-
-						<div class="content">
-							<iframe src="http://vaughnlive.tv/embed/video/peterogasawara?viewers=true&autoplay=true" frameborder="0" framespacing="0" width="1280" height="720" /></iframe>
-						</div>
-					</div>
-
-					<div class="tab">
-						<input type="radio" id="tab-5" name="tab-group-1">
-						<label for="tab-5">ustream(juu)</label>
-
-						<div class="content">
-							<iframe src="//www.ustream.tv/embed/17133099?wmode=direct" style="border: 0 none transparent;" frameborder="no" width="1280" height="720"></iframe>
-						</div> 
-					</div>
-
-					<div class="tab">
-						<input type="radio" id="tab-6" name="tab-group-1">
-						<label for="tab-6">ustream(596)</label>
-
-						<div class="content">
-							<iframe src="//www.ustream.tv/embed/19755163?v=3&wmode=direct" style="border: 0 none transparent;" frameborder="no" width="1280" height="720"></iframe>
-						</div> 
-					</div>
-
-					<div class="tab">
-						<input type="radio" id="tab-7" name="tab-group-1" checked>
-						<label for="tab-7">ConnectCast</label>
-
-						<div class="content">
-							<iframe width="1280" height="720" scrolling="no" src="http://connectcast.tv/embed/dreamlinuxer0E5" frameborder="0" allowfullscreen></iframe>
-						</div> 
-					</div>
-
-				</div>
-
-			</div>
-		</TD>
-		<TD valign=top>
-		<div id="tlkio" data-channel="dopphentai" style="width:380px;height:775px;"></div><script async src="http://tlk.io/embed.js" type="text/javascript"></script>
-			
-			<!--
-			<iframe width="380px" height="775px" frameborder="no" scrolling="no" border="0" marginwidth="0" marginheight="0" src="http://www.twitch.tv/chat/embed?channel=dreamlinuxer0x67616d65&amp;popout_chat=true&over_18=true">
-			</iframe>
-			<iframe id="chat-embed" width="380px" height="775px" scrolling="no" frameborder="0" src="//connectcast.tv/chat/dreamlinuxer0E5"></iframe>
-			<iframe src="http://vaughnlive.tv/embed/chat/dreamlinuxer000" frameborder="0" framespacing="0" width="380" height="775" /></iframe>
-			-->
-		</TD>
-
-	</TR>
-</table>
-<a href=./small.html>small screen</a><BR>
+</div>
+<div class="footer">
 密碼：dopphentai
+</div>
 </body>
 
 </html>
