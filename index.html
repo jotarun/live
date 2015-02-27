@@ -26,7 +26,12 @@ html,body
     height:0;
     padding-bottom: 56.25%; /* proportion value to aspect ratio 16:9 (9 / 16 = 0.5625 or 56.25%) */
     padding-top: 32px;
+    display:none;
+}
+.fluid.show
+{
 
+	display:block;
 }
 .fluid iframe
 {
@@ -89,25 +94,20 @@ html,body
 	display:block;
 	float:left;
 	margin:0;
-	padding:0;
-
-}
-.tabs a{
 	display: block;
 	color:#AAA;
 	text-decoration: none;
-	margin:0;
 	padding:15px 10px ;
 	font-size: .9em;
 }
 
-.tabs a:hover{
+.tabs li:hover{
 	background-color: #111;
 	color:#FFF;
 	transition: all 0.5s ease;
 
 }
- .checked a{
+ li.checked {
 	box-shadow: 0 -2px 5px #111;
 	background: #000!important;
 	color:#FFF;
@@ -122,29 +122,47 @@ html,body
 <div class="main">
 	<ul class="tabs">
 		<li> 
-			<a href="http://vaughnlive.tv/embed/video/dreamlinuxer000?viewers=true&autoplay=true" target="videoSrc">Vaugh</a>	
+			Vaugh	
 		</li>
 		<li class="checked">
-			<a href="http://www.ustream.tv/embed/19787840?wmode=direct" target="videoSrc">USTREAM</a>	
+			USTREAM
 		</li>
 		<li> 
-			<a href="http://www.ustream.tv/embed/17133099?wmode=direct" target="videoSrc">USTREAM(juu)</a>	
+			USTREAM(juu)	
 		</li>
 		<li>
-			<a href="http://www.ustream.tv/embed/19755163?wmode=direct" target="videoSrc">USTREAM(596)</a>	
+			USTREAM(596)	
 		</li>
 		<li> 
-			<a href="http://www.twitch.tv/dreamlinuxer0x67616d65/embed" target="videoSrc">twitch</a>	
+			twitch
 		</li>
 		<li>
-			<a href="http://vaughnlive.tv/embed/video/peterogasawara?viewers=true&autoplay=true" target="videoSrc">yuta</a>
+			yuta
 		</li>
 		<li>
-			<a href="http://connectcast.tv/embed/dreamlinuxer0E5" target="videoSrc">ConnectCast</a>
+			ConnectCast
 		</li>
 	</ul>
 	<div class="fluid">
+		<iframe src="http://vaughnlive.tv/embed/video/dreamlinuxer000?viewers=true&autoplay=true" target="videoSrc" name="videoSrc"></iframe>	
+	</div>
+	<div class="fluid show">
 		<iframe src="http://www.ustream.tv/embed/19787840?wmode=direct" name="videoSrc"></iframe>	
+	</div>
+	<div class="fluid">
+		<iframe src="http://www.ustream.tv/embed/17133099?wmode=direct" name="videoSrc"></iframe>	
+	</div>
+	<div class="fluid">
+		<iframe src="http://www.ustream.tv/embed/19755163?wmode=direct" name="videoSrc"></iframe>	
+	</div>
+	<div class="fluid">
+		<iframe src="http://www.twitch.tv/dreamlinuxer0x67616d65/embed" name="videoSrc"></iframe>	
+	</div>
+	<div class="fluid">
+		<iframe src="http://vaughnlive.tv/embed/video/peterogasawara?viewers=true&autoplay=true" name="videoSrc"></iframe>	
+	</div>
+	<div class="fluid">
+		<iframe src="http://connectcast.tv/embed/dreamlinuxer0E5" name="videoSrc"></iframe>	
 	</div>
 <div class="footer">
 密碼：dopphentai
@@ -157,11 +175,15 @@ html,body
 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 	<script type="text/javascript">
-		$('.tabs a').bind('click',function(){
-			$(this).parent().siblings('.checked').removeClass('checked');
-			$(this).parent().addClass('checked');
-			return true;
-		});
+
+	$(".tabs").on("click", "li", function() {
+			$(this).siblings('.checked').removeClass('checked');
+			$(this).addClass('checked');
+			var id = $(this).index();
+   			$(".fluid.show").removeClass('show');
+   			$(".fluid").eq(id).addClass('show');
+	});
+		
 	</script>
 </body>
 
