@@ -20,19 +20,20 @@ html,body
 }
 .fluid
 {
-    position: relative;
-    overflow: hidden;
-    width:0;
-    height:0;
-    padding-bottom: 0; /* proportion value to aspect ratio 16:9 (9 / 16 = 0.5625 or 56.25%) */
-    padding-top: 0;
-	}
-.fluid.show
-{
     width:100%;
+    position: relative;
     padding-bottom: 56.25%; /* proportion value to aspect ratio 16:9 (9 / 16 = 0.5625 or 56.25%) */
-    padding-top: 32px;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+
 }
+.fluid iframe.show
+{
+z-index:999;
+}
+
+
 .fluid iframe
 {
 	border: none;
@@ -41,6 +42,8 @@ html,body
     left: 0;
     width: 100%;
     height: 100%;
+    z-index:-1;
+
 }
 .container
 {
@@ -55,7 +58,7 @@ html,body
 	height: 100%;
 	background: #222;
 	vertical-align: top;
-	
+
 }
 
 .sidebar
@@ -91,7 +94,7 @@ html,body
 	padding: 0 10px;
 	list-style: none;
 	line-height: 1.444;
-
+	width:100%;
 }
 
 .tabs li
@@ -150,23 +153,16 @@ html,body
 	</ul>
 	<div class="fluid">
 		<iframe src="http://vaughnlive.tv/embed/video/dreamlinuxer000?viewers=true&autoplay=true" target="videoSrc" name="videoSrc"></iframe>	
-	</div>
-	<div class="fluid show">
-		<iframe src="http://www.ustream.tv/embed/19787840?wmode=direct" name="videoSrc"></iframe>	
-	</div>
-	<div class="fluid">
+
+		<iframe class="show" src="http://www.ustream.tv/embed/19787840?wmode=direct" name="videoSrc"></iframe>	
+	
 		<iframe src="http://www.ustream.tv/embed/17133099?wmode=direct" name="videoSrc"></iframe>	
-	</div>
-	<div class="fluid">
+	
 		<iframe src="http://www.ustream.tv/embed/19755163?wmode=direct" name="videoSrc"></iframe>	
-	</div>
-	<div class="fluid">
+	
 		<iframe src="http://www.twitch.tv/dreamlinuxer0x67616d65/embed" name="videoSrc"></iframe>	
-	</div>
-	<div class="fluid">
+	
 		<iframe src="http://vaughnlive.tv/embed/video/peterogasawara?viewers=true&autoplay=true" name="videoSrc"></iframe>	
-	</div>
-	<div class="fluid">
 		<iframe src="http://connectcast.tv/embed/dreamlinuxer0E5" name="videoSrc"></iframe>	
 	</div>
 <div class="footer">
@@ -184,12 +180,13 @@ html,body
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 	<script type="text/javascript">
 
+
 	$(".tabs").on("click", "li", function() {
 			$(this).siblings('.checked').removeClass('checked');
 			$(this).addClass('checked');
 			var id = $(this).index();
-   			$(".fluid.show").removeClass('show');
-   			$(".fluid").eq(id).addClass('show');
+   			$(".fluid iframe").removeClass('show');
+   			$(".fluid iframe").eq(id).addClass('show');
 	});
 		
 	</script>
