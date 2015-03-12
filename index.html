@@ -20,17 +20,17 @@ html,body
 }
 .fluid
 {
-    width:100%;
-    position: relative;
-    padding-bottom: 56.25%; /* proportion value to aspect ratio 16:9 (9 / 16 = 0.5625 or 56.25%) */
-    padding-top: 30px;
-    height: 0;
-    overflow: hidden;
+	width:100%;
+	position: relative;
+	padding-bottom: 56.25%; /* proportion value to aspect ratio 16:9 (9 / 16 = 0.5625 or 56.25%) */
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
 
 }
 .fluid iframe.show
 {
-z-index:999;
+	z-index:999;
 }
 
 
@@ -38,19 +38,19 @@ z-index:999;
 {
 	border: none;
 	position: absolute;
-    top: 0; 
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index:-1;
+	top: 0; 
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index:-1;
 
 }
 .container
 {
-	width:100%;
-	height:100%;
-    overflow: hidden;
-    display: table;
+	width:90%;
+	height:90%;
+	overflow: hidden;
+	display: table;
 }
 .main
 {
@@ -115,7 +115,7 @@ z-index:999;
 	transition: all 0.5s ease;
 
 }
- li.checked {
+li.checked {
 	box-shadow: 0 -2px 5px #111;
 	background: #000!important;
 	color:#FFF;
@@ -125,169 +125,65 @@ z-index:999;
 
 </head>
 
-<<<<<<< HEAD
-<body BGCOLOR="000000" text="#FFFFFF" link="#FFFFFF" vlink="#FFFFFF" alink="#FFFFFF">
-<table>
-	<TR>
-		<TD rowspan=2>
-			<div id="page-wrap">
-
-				<div class="tabs">
-
-					<div class="tab">
-						<input type="radio" id="tab-1" name="tab-group-1">
-						<label for="tab-1">vaughn</label>
-
-						<div class="content">
-							<iframe src="http://vaughnlive.tv/embed/video/dreamlinuxer000?viewers=true&autoplay=true" frameborder="0" framespacing="0" width="1280" height="720" /></iframe>
-						</div> 
-					</div>
-
-					<div class="tab">
-						<input type="radio" id="tab-2" name="tab-group-1" checked>
-						<label for="tab-2">ustream</label>
-
-						<div class="content">
-							<iframe src="//www.ustream.tv/embed/19787840?wmode=direct" style="border: 0 none transparent;" frameborder="no" width="1280" height="720"></iframe>
-						</div>
-					</div>
-
-					<div class="tab">
-						<input type="radio" id="tab-3" name="tab-group-1">
-						<label for="tab-3">twitch</label>
-
-						<div class="content">
-							<object type="application/x-shockwave-flash" height="720" width="1280" id="live_embed_player_flash" data="http://www.twitch.tv/widgets/live_embed_player.swf?channel=dreamlinuxer0x67616d65" bgcolor="#000000">
-								<param name="allowFullScreen" value="true" />
-								<param name="allowScriptAccess" value="always" />
-								<param name="allowNetworking" value="all" />
-								<param name="movie" value="http://www.twitch.tv/widgets/live_embed_player.swf" />
-								<param name="flashvars" value="hostname=www.twitch.tv&channel=dreamlinuxer0x67616d65&auto_play=true&start_volume=25" />
-							</object>
-						</div> 
-					</div>
-
-					<div class="tab">
-						<input type="radio" id="tab-4" name="tab-group-1">
-						<label for="tab-4">yuta</label>
-
-						<div class="content">
-							<iframe src="http://vaughnlive.tv/embed/video/peterogasawara?viewers=true&autoplay=true" frameborder="0" framespacing="0" width="1280" height="720" /></iframe>
-						</div>
-					</div>
-
-					<div class="tab">
-						<input type="radio" id="tab-5" name="tab-group-1">
-						<label for="tab-5">ustream(juu)</label>
-
-						<div class="content">
-							<iframe src="//www.ustream.tv/embed/17133099?wmode=direct" style="border: 0 none transparent;" frameborder="no" width="1280" height="720"></iframe>
-						</div> 
-					</div>
-
-					<div class="tab">
-						<input type="radio" id="tab-6" name="tab-group-1">
-						<label for="tab-6">ustream(596)</label>
-
-						<div class="content">
-							<iframe src="//www.ustream.tv/embed/19755163?v=3&wmode=direct" style="border: 0 none transparent;" frameborder="no" width="1280" height="720"></iframe>
-						</div> 
-					</div>
-<!--
-					<div class="tab">
-						<input type="radio" id="tab-7" name="tab-group-1" checked>
-						<label for="tab-7">ConnectCast</label>
-
-						<div class="content">
-							<iframe width="1280" height="720" scrolling="no" src="http://connectcast.tv/embed/dreamlinuxer0E5" frameborder="0" allowfullscreen></iframe>
-						</div> 
-					</div>
--->
-				</div>
-
-			</div>
-		</TD>
-		<TD valign=top>
-			<!--
-			<div id="tlkio" data-channel="DreamLinuxer000" data-theme="http://dreamlinuxer.github.io/live/theme.css" style="width:380px;height:775px;"></div>
-			<script async src="http://tlk.io/embed.js" type="text/javascript"></script>
-			<iframe width="380px" height="775px" frameborder="no" scrolling="no" border="0" marginwidth="0" marginheight="0" src="http://www.twitch.tv/chat/embed?channel=dreamlinuxer0x67616d65&amp;popout_chat=true&over_18=true">
-			</iframe>
-			<iframe id="chat-embed" width="380px" height="775px" scrolling="no" frameborder="0" src="//connectcast.tv/chat/dreamlinuxer0E5"></iframe>
-			-->
-			<iframe src="http://vaughnlive.tv/embed/chat/dreamlinuxer000" frameborder="0" framespacing="0" width="380" height="775" /></iframe>
-		</TD>
-
-	</TR>
-</table>
-<a href=./index.html>720P</a> <a href=./576p.html>576P</a> <a href=./480p.html>480P</a> <BR>
-=======
 <body>
 <div class="container">
-<div class="main">
-	<ul class="tabs">
-		<li> 
+	<div class="main">
+		<ul class="tabs">
+			<li> 
 			Vaugh	
-		</li>
-		<li class="checked">
+			</li>
+			<li class="checked">
 			USTREAM
-		</li>
-		<li> 
+			</li>
+			<li> 
 			USTREAM(juu)	
-		</li>
-		<li>
+			</li>
+			<li>
 			USTREAM(596)	
-		</li>
-		<li> 
+			</li>
+			<li> 
 			twitch
-		</li>
-		<li>
+			</li>
+			<li>
 			yuta
-		</li>
-		<li>
-			ConnectCast
-		</li>
-	</ul>
-	<div class="fluid">
-		<iframe src="http://vaughnlive.tv/embed/video/dreamlinuxer000?viewers=true&autoplay=true" target="videoSrc" name="videoSrc"></iframe>	
+			</li>
+		</ul>
+		<div class="fluid">
+			<iframe src="http://vaughnlive.tv/embed/video/dreamlinuxer000?viewers=true&autoplay=true" target="videoSrc" name="videoSrc"></iframe>	
 
-		<iframe class="show" src="http://www.ustream.tv/embed/19787840?wmode=direct" name="videoSrc"></iframe>	
-	
-		<iframe src="http://www.ustream.tv/embed/17133099?wmode=direct" name="videoSrc"></iframe>	
-	
-		<iframe src="http://www.ustream.tv/embed/19755163?wmode=direct" name="videoSrc"></iframe>	
-	
-		<iframe src="http://www.twitch.tv/dreamlinuxer0x67616d65/embed" name="videoSrc"></iframe>	
-	
-		<iframe src="http://vaughnlive.tv/embed/video/peterogasawara?viewers=true&autoplay=true" name="videoSrc"></iframe>	
-		<iframe src="http://connectcast.tv/embed/dreamlinuxer0E5" name="videoSrc"></iframe>	
+			<iframe class="show" src="http://www.ustream.tv/embed/20171448?wmode=direct" name="videoSrc"></iframe>	
+
+			<iframe src="http://www.ustream.tv/embed/17133099?wmode=direct" name="videoSrc"></iframe>	
+
+			<iframe src="http://www.ustream.tv/embed/19755163?wmode=direct" name="videoSrc"></iframe>	
+
+			<iframe src="http://www.twitch.tv/dreamlinuxer0x67616d65/embed" name="videoSrc"></iframe>	
+
+			<iframe src="http://vaughnlive.tv/embed/video/peterogasawara?viewers=true&autoplay=true" name="videoSrc"></iframe>	
+		</div>
+		<div class="footer">
+			密碼：dopphentai
+		</div>
 	</div>
-<div class="footer">
->>>>>>> 0854eede8c23baa63ed7150ea2666b862dc250b4
-密碼：dopphentai
+	<div class="sidebar">
+		<!--
+		<iframe src="http://vaughnlive.tv/embed/chat/dreamlinuxer000"  width="100%" height="100%"/></iframe>	
+		-->
+		<div id="tlkio" data-channel="dreamlinuxer000" data-theme="http://dreamlinuxer.github.io/live/theme.css"></div>
+		<script async src="http://tlk.io/embed.js" type="text/javascript"></script>
+	</div>
 </div>
-</div>
-<div class="sidebar">
-<iframe src="http://vaughnlive.tv/embed/chat/dreamlinuxer000"  width="100%" height="100%"/></iframe>	
-<!--
-<div id="tlkio" data-channel="dreamlinuxer000"></div><script async src="http://tlk.io/embed.js" type="text/javascript"></script>	
--->
-</div>
-</div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script type="text/javascript">
 
-	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-	<script type="text/javascript">
-
-
-	$(".tabs").on("click", "li", function() {
-			$(this).siblings('.checked').removeClass('checked');
-			$(this).addClass('checked');
-			var id = $(this).index();
-   			$(".fluid iframe").removeClass('show');
-   			$(".fluid iframe").eq(id).addClass('show');
-	});
-		
-	</script>
+$(".tabs").on("click", "li", function() {
+		$(this).siblings('.checked').removeClass('checked');
+		$(this).addClass('checked');
+		var id = $(this).index();
+		$(".fluid iframe").removeClass('show');
+		$(".fluid iframe").eq(id).addClass('show');
+		});
+</script>
 </body>
 
 </html>
